@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160b35">
+  <title>Galaxy Birthday 💜</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="galaxy.css">
+  <script src="galaxy.js" defer></script>
+</head>
+<body>
+  <div class="galaxy-background"></div>
+  <div class="stars" id="stars"></div>
+  <div class="shooting-star"></div>
+
+  <div class="planet planet-one"></div>
+  <div class="planet planet-two"></div>
+
+  <main class="birthday-container">
+    <div class="crown">♕</div>
+
+    <p class="eyebrow">✦ A LITTLE SOMETHING TO MAKE YOU SMILE ✦</p>
+
+    <h1>Happy Birthday<span></span></h1>
+    <h2>Rahmadania Arrum Pratisa<span></span></h2>
+
+    <p class="subtitle">
+      To someone who makes life more colorful ✨
+    </p>
+
+    <div class="photo-frame">
+      <div class="photo-glow"></div>
+
+      <!-- GANTI assets/foto.jpg DENGAN FOTO KAMU -->
+      <img
+        src="assets/alyn1.jpeg"
+        alt="Foto kenangan ulang tahun"
+        class="birthday-photo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      >
+
+      <div class="photo-placeholder">
+        <span>♡</span>
+        <p>Your beautiful memory</p>
+        <small>Let your picture shine here ✨</small>
+      </div>
+
+      <span class="photo-star star-a">✦</span>
+      <span class="photo-star star-b">♡</span>
+    </div>
+
+    
+<div class="birthday-message">
+
+  <p class="message-extra" id="extraMessage">
+  Semoga di umur yang baru ini, kamu selalu dikelilingi hal-hal baik
+  dan orang-orang tulus. Semoga setiap langkah yang kamu ambil membawa
+  pengalaman berharga, setiap usaha membuahkan hasil, dan
+  setiap impian menemukan jalannya untuk menjadi nyata.
+  Tetap percaya pada dirimu sendiri, ya.
+  You deserve all the good things coming your way. 🌷💫
+</p>
+</div>
+
+    
+<!-- PETUNJUK SWIPE UP -->
+<div class="swipe-hint" id="playMemoryButton">
+  <span class="swipe-arrow">⌄</span>
+  <p>Swipe Up for More</p>
+  <small>A little collection of memories ♡</small>
+</div>
+
+<!-- GALERI FOTO AESTHETIC -->
+<section class="aesthetic-gallery" id="aestheticGallery">
+  <p class="gallery-eyebrow">✦ A LITTLE PHOTO COLLECTION ✦</p>
+  <h2>Little Moments, Pretty Memories</h2>
+  <p class="gallery-description">
+    A few memories to brighten your special day.
+  </p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="assets/alyn2.jpeg" alt="Aesthetic photo 1" loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="assets/alyn3.jpeg" alt="Aesthetic photo 2" loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="assets/alyn4.jpeg" alt="Aesthetic photo 3" loading="lazy">
+    </div>
+
+    <div class="gallery-item">
+      <img src="assets/alyn5.jpeg" alt="Aesthetic photo 4" loading="lazy">
+    </div>
+  </div>
+
+  <p class="gallery-note">
+    Keep growing, keep glowing. ✨
+  </p>
+  </section>
+
+
+<!-- SWIPE UP KEDUA -->
+<div class="swipe-hint swipe-hint-second" id="surpriseHint">
+  <span class="swipe-arrow">⌄</span>
+  <p>Tap to Continue ♡</p>
+<small>A special memory for you ✨</small>
+</div>
+
+<!-- GALERI KEDUA: CAROUSEL FOTO -->
+<section
+  class="aesthetic-gallery aesthetic-gallery-second"
+  id="secondGallery"
+>
+  <p class="gallery-eyebrow">✦ A COLLECTION OF MEMORIES ✦</p>
+
+  <h2>Little Things, Lovely Memories ♡</h2>
+
+  <p class="gallery-description">
+    A few memories to brighten your special day.
+  </p>
+
+  
+<!-- DUA FOTO BERDAMPINGAN -->
+<div class="memory-layout">
+
+  <!-- FOTO KIRI: TETAP -->
+  <div class="memory-fixed">
+    <div class="fixed-photo-frame">
+      <span class="fixed-photo-tape"></span>   
+      <video
+        id="memoryVideo"
+        src="assets/videoalyn.mp4"
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+
+    <audio id="memorySong" src="assets/nuca_masakini1.mp3" loop></audio>
+    </div>
+    <p class="memory-caption">a moment to remember ♡</p>
+  </div>
+
+  <!-- FOTO KANAN: CAROUSEL -->
+  <div class="memory-carousel" id="memoryCarousel">
+
+    <button class="carousel-arrow prev" id="prevPhoto"
+      type="button" aria-label="Foto sebelumnya">‹</button>
+
+    <div class="memory-viewport">
+      <div class="memory-track" id="memoryTrack">
+
+        <div class="memory-slide">
+          <div class="paint-frame">
+            <img src="assets/pratisa5.jpeg" alt="Kenangan indah 2">
+          </div>
+          <p class="memory-caption">beautiful little moments ✨</p>
+        </div>
+
+        <div class="memory-slide">
+          <div class="paint-frame">
+            <img src="assets/pratisa2.jpeg" alt="Kenangan indah 3">
+          </div>
+          <p class="memory-caption">memories to keep ♡</p>
+        </div>
+
+        <div class="memory-slide">
+          <div class="paint-frame">
+            <img src="assets/pratisa3.jpeg" alt="Kenangan indah 4">
+          </div>
+          <p class="memory-caption">you make life brighter ✧</p>
+        </div>
+
+        <div class="memory-slide">
+          <div class="paint-frame">
+            <img src="assets/pratisa4.jpeg" alt="Kenangan indah 5">
+          </div>
+          <p class="memory-caption">sweet days, sweet memories ♡</p>
+        </div>
+
+        <div class="memory-slide">
+          <div class="paint-frame">
+            <img src="assets/pratisa5.jpeg" alt="Kenangan indah 6">
+          </div>
+          <p class="memory-caption">always keep glowing ✨</p>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="carousel-arrow next" id="nextPhoto"
+      type="button" aria-label="Foto berikutnya">›</button>
+
+  </div>
+</div>
+
+<!-- INDIKATOR CAROUSEL -->
+<div class="carousel-progress">
+  <span id="photoCounter">01 / 05</span>
+
+  <div class="carousel-dots" id="carouselDots">
+    <button type="button" class="carousel-dot active" aria-label="Foto 1"></button>
+    <button type="button" class="carousel-dot" aria-label="Foto 2"></button>
+    <button type="button" class="carousel-dot" aria-label="Foto 3"></button>
+    <button type="button" class="carousel-dot" aria-label="Foto 4"></button>
+    <button type="button" class="carousel-dot" aria-label="Foto 5"></button>
+  </div>
+</div>
+
+
+<!-- TOMBOL PLAYLIST DI BAWAH A COLLECTION OF MEMORIES -->
+<div class="playlist-entry">
+  <button class="love-button" id="loveButton" type="button">
+    ♫ Listen to Our Playlist ♡
+  </button>
+</div>
+
+</section>
+
+
+<!-- PENUTUP GALERI -->
+<div class="gallery-ending">
+  <p class="footer-note" id="footerNote">
+    Made just for you 🌙
+  </p>
+</div>
+
+
+</main>
+
+<!-- HALAMAN PLAYLIST -->
+<section id="playlistScreen" class="playlist-screen">
+  <div class="playlist-card">
+    <p class="playlist-eyebrow">A LITTLE GIFT FOR YOU ♡</p>
+    <h2>Favorite Songs</h2>
+    <p class="playlist-subtitle">
+      Four songs, countless feelings. ✨
+    </p>
+
+    <div class="playlist-now-playing">
+      <div class="playlist-disc" id="playlistDisc">♫</div>
+      <p class="playlist-label">NOW PLAYING</p>
+      <h3 id="currentSongTitle">Our First Song</h3>
+      <p id="currentSongArtist">Favorite Artist</p>
+
+      <audio id="playlistAudio" preload="metadata"></audio>
+
+      <div class="playlist-progress">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="songProgress"
+          min="0" max="100" value="0" aria-label="Posisi lagu">
+        <span id="duration">0:00</span>
+      </div>
+
+      <div class="playlist-controls">
+        <button id="prevSong" type="button" aria-label="Lagu sebelumnya">⏮</button>
+        <button id="playSong" type="button" class="playlist-play" aria-label="Putar lagu">▶</button>
+        <button id="nextSong" type="button" aria-label="Lagu berikutnya">⏭</button>
+      </div>
+
+      <label class="playlist-repeat">
+        <input type="checkbox" id="repeatSong">
+        Ulangi lagu saat ini
+      </label>
+    </div>
+
+    <div class="playlist-list" id="playlistList"></div>
+
+    <p class="playlist-footer">Made with care, just for you</p>
+
+    <button id="continueToWish" class="continue-wish-button" type="button">
+  Continue to Make a Wish ✧
+</button>
+
+<button id="backToMemories" class="playlist-back" type="button">
+  ♡ Back to Our Memories
+</button>
+</div>
+</section>
+
+<!-- HALAMAN MAKE A WISH -->
+<section id="makeWishScreen" class="make-wish-screen" hidden>
+  <div class="make-wish-card">
+
+    <p class="make-wish-label">A SPECIAL MOMENT FOR YOU</p>
+    <h1>Make a Wish </h1>
+
+    <p class="make-wish-message">
+      Today is your day, and this little moment is all yours.
+      Close your eyes, make a wish, and let your heart dream. ✨
+    </p>
+
+    
+<div class="wish-video-wrapper">
+  <video
+    id="wishVideo"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="auto"
+  >
+    <source src="assets/makeawish.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- MUSIK LATAR MAKE A WISH -->
+<audio
+  id="wishMusic"
+  src="assets/pamungkas_happy_birthday_to_you.mp3"
+  loop
+  preload="auto"
+></audio>
+
+
+    <p class="wish-caption">
+      Take a deep breath, make a wish.
+    </p>
+
+    
+    <button
+      id="continueToCelebration"
+      class="continue-wish-button"
+      type="button"
+    >
+      Continue to Celebration ✧
+    </button>
+
+
+    <div id="wishCompletion" class="wish-completion" hidden>
+      <div class="wish-sparkle">✧ ✨ ✧</div>
+      <h2>May Your Wish Come True</h2>
+
+      <p>
+        Whatever your wish may be, I hope this new chapter
+        brings you happiness, courage, and beautiful surprises.
+      </p>
+
+      <p class="wish-friend-note">
+        You deserve so many good things in life.
+        Keep smiling and keep shining. ♡
+      </p>
+
+      <button id="backToPlaylist" class="continue-wish-button" type="button">
+        ♡ Back to Playlist
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- HALAMAN CELEBRATION -->
+<section id="celebrationScreen" hidden>
+  <div class="make-wish-card">
+    <p class="make-wish-label">A DAY MADE FOR YOU</p>
+    <h1>Happy Birthday! ♡</h1>
+    <p class="make-wish-message">
+      May your wishes come true, and may your days
+      be filled with love, happiness, and beautiful memories. ✨
+    </p>
+  </div>
+</section>
+
+
+<!-- Musik yang berlanjut dari halaman kejutan -->
+<audio
+  id="backgroundMusic"
+  src="assets/alex_crichton_what_if_i_call.mp3"
+  loop
+  preload="auto"
+></audio>
+
+</body>
+</html>
+
+
+

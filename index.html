@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14172b">
+<title>A Little Surprise ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+<div class="glow glow-a"></div><div class="glow glow-b"></div><div class="stars" id="stars"></div>
+
+<section class="screen active" id="loadingScreen">
+  <div class="loading">
+    <div class="heart">♡</div><h2>Menyiapkan kejutan kecil...</h2>
+    <div class="track"><span></span></div><p>just for you ✨</p>
+  </div>
+</section>
+
+<section class="screen" id="pinScreen">
+  <div class="card">
+    <div class="icon">🔐</div><p class="eyebrow">PRIVATE SURPRISE</p>
+    <h1>Hallo Alynne</h1>
+    <p class="desc">Masukkan 6 angka spesial… hari, bulan, dan tahun lahir kamu yaa 💌</p>
+    <div class="dots" id="pinDots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="status" id="pinStatus">Masukkan enam angka</p>
+    <div class="keypad" id="keypad">
+      <button data-digit="1">1</button><button data-digit="2">2</button><button data-digit="3">3</button>
+      <button data-digit="4">4</button><button data-digit="5">5</button><button data-digit="6">6</button>
+      <button data-digit="7">7</button><button data-digit="8">8</button><button data-digit="9">9</button>
+      <button class="blank" disabled></button><button data-digit="0">0</button><button id="deleteDigit" class="delete">⌫</button>
+    </div>
+    <p class="note">A little surprise is waiting for you ♡</p>
+  </div>
+</section>
+
+<section class="screen" id="giftScreen">
+  <div class="gift-content">
+    <p class="eyebrow">PIN BENAR ✨</p><h1>Yeay, berhasil!</h1>
+    <p class="desc">Ada sesuatu yang spesial buat kamu.<br>Ketuk kadonya, ya 💖</p>
+    <button class="gift" id="giftButton" aria-label="Buka kado"><span>🎁</span><b>✦</b><i>✧</i></button>
+    <p class="tap">KLIK KADONYA</p>
+  </div>
+</section>
+
+<section class="screen flower-screen" id="flowerScreen">
+  <div class="flower-field" id="flowerField"></div>
+
+  <canvas id="fireworksCanvas" class="fireworks-canvas"></canvas>
+
+  <div class="flower-message birthday-message" id="flowerMessage">
+    <div class="birthday-kicker">A SPECIAL DAY FOR YOU</div>
+    <div class="birthday-cake">🎂</div>
+
+    <h1>
+      Happy Birthday<br>
+      <span>Alynne!</span> 🎉
+    </h1>
+
+    <p>
+      May your day be filled with happiness,<br>
+      love, and beautiful surprises. ✨
+    </p>
+
+    <button id="continueButton" class="continue close-button">
+      NEXT
+    </button>
+  </div>
+</section>
+
+
+<!-- HALAMAN GAME BARU -->
+<section id="miniGameScreen" class="mini-game-screen">
+  <div class="mini-game-card">
+
+    <div class="mini-game-decoration">🦄 💖 ✨</div>
+
+    <p class="mini-game-label">A SIMPLE GAME TO MAKE YOU SMILE</p>
+
+    <h2>Catch the Unicorn!</h2>
+
+    <p class="mini-game-description">
+      Tangkap 10 unicorn ajaib
+      untuk membuka kejutan spesial!
+    </p>
+
+    <div class="mini-game-stats">
+      <div>
+        <span>Unicorn terkumpul</span>
+        <strong><span id="unicornCount">0</span>/10</strong>
+      </div>
+    </div>
+
+    <div id="unicornGameArea" class="unicorn-game-area">
+      <div id="unicornIntro" class="unicorn-intro">
+        <span>🦄</span>
+        <p>Siap menangkap unicorn?</p>
+        <small>Tekan mulai dan kumpulkan semuanya!</small>
+      </div>
+    </div>
+
+    <p id="unicornGameMessage" class="mini-game-message">
+      Kamu pasti bisa! ✨
+    </p>
+
+    <button id="startUnicornGame" class="mini-game-button">
+      Mulai Bermain 💖
+    </button>
+
+    <div id="unicornWinPanel" class="unicorn-win-panel" hidden>
+      <div class="win-decoration">🎉 🎁 💖</div>
+
+      <button id="openBirthdaySurprise" class="mini-game-button">
+        Selanjutnya 💌
+      </button>
+    </div>
+
+    <div id="unicornLosePanel" class="unicorn-win-panel" hidden>
+      <div class="win-decoration">🥹 🦄 💗</div>
+      <h3>Yuk, Coba Lagi!</h3>
+      <p>Belum berhasil kali ini, tapi kamu pasti bisa!</p>
+
+      <button id="retryUnicornGame" class="mini-game-button">
+        Main Lagi ✨
+      </button>
+    </div>
+
+    <div id="birthdaySurpriseMessage" class="birthday-surprise-message" hidden>
+      <div class="win-decoration">🎂 💖 🎉</div>
+      <h3>Happy Birthday! 💗</h3>
+      <p>
+        Semoga hari-harimu selalu dipenuhi kebahagiaan,
+        cinta, tawa, dan banyak kejutan indah.
+        Kamu pantas mendapatkan semua hal baik di dunia ini!
+      </p>
+      <div class="surprise-hearts">💗 🦄 🌸 💗</div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="popup-backdrop" id="errorPopup" aria-hidden="true">
+  <div class="popup" role="alertdialog" aria-modal="true">
+    <div class="popup-icon">🥺</div><h2>Yah, PIN-nya salah</h2>
+    <p>tahun lahir ambil 2 angka dari belakang</p>
+    <p>Belum cocok nih. Coba ingat-ingat lagi, ya 💗</p>
+    <button id="tryAgainButton">Coba lagi</button>
+  </div>
+</div>
+
+<audio id="backgroundMusic" loop preload="auto"><source src="assets/alex_crichton_what_if_i_call.mp3" type="audio/mpeg"></audio>
+<script src="welcome.js"></script>
+</body>
+</html>

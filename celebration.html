@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171b30">
+  <title>Sweet 20 Celebration ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <button class="floating-icon cake-icon" aria-label="Birthday cake" tabindex="-1">🎂</button>
+  <button class="floating-icon star-icon" aria-label="Star" tabindex="-1">★</button>
+
+  <main class="hero">
+    <div class="content">
+      <div class="eyebrow"><span>🎂</span> SWEET 20 CELEBRATION</div>
+      <h1 id="birthdayName">Rahmadania Arrum Pratisa</h1>
+      <p class="subtitle">Entering a new chapter at 20, filled with passion, dreams, and blessings.</p>
+      <button class="video-button" id="openGreeting"><span class="video-symbol">▶</span> Tonton Video Ucapan</button>
+      <div class="hint">A little celebration made just for you <span>✦</span></div>
+    </div>
+    <div class="glow-orb orb-one"></div>
+    <div class="glow-orb orb-two"></div>
+    <div class="sparkle sparkle-one">✧</div>
+    <div class="sparkle sparkle-two">✦</div>
+    <div class="sparkle sparkle-three">✧</div>
+  </main>
+
+  
+<!-- IDENTITAS PEMBUAT -->
+<section class="creator-section">
+  <div class="creator-card">
+    <span class="creator-star">✦</span>
+    <p class="creator-label">A LITTLE NOTE</p>
+    <h2>Made with Sincerity</h2>
+    <p class="creator-message">
+      Designed with a passion for making someone’s
+      special day even more colorful.
+    </p>
+
+    <div class="creator-divider"></div>
+
+    <p class="creator-by">Created by</p>
+    <h3 class="creator-name">Vamasy</h3>
+
+    <!-- TOMBOL KEMBALI KE HALAMAN AWAL -->
+  <button
+    class="back-to-beginning"
+    id="backToBeginning"
+    type="button"
+>
+  <span class="button-icon">↶</span>
+  Back to the Beginning
+  <span class="button-sparkle">✧</span>
+</button>
+
+    <span class="creator-heart">✦</span>
+  </div>
+</section>
+
+
+  <div class="modal" id="greetingModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeGreeting" aria-label="Tutup">×</button>
+      <div class="modal-icon">💌</div>
+      <h2 id="modalTitle">A little message for you</h2>
+      <p id="greetingText">Semoga setiap langkahmu dipenuhi kebahagiaan, keberanian untuk mengejar mimpi, dan orang-orang baik yang selalu mendukungmu. Keep shining! ✨</p>
+      
+      <div class="video-container">
+        <video id="greetingVideo" controls playsinline preload="metadata">
+          <source src="assets/ucapan_baru.mp4" type="video/mp4">
+          Browser kamu tidak mendukung pemutaran video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Opsional: letakkan file musik di assets/music.mp3, lalu ubah songLabel di bawah. -->
+  <audio id="backgroundMusic" loop preload="none">
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
